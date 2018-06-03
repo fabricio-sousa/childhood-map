@@ -109,4 +109,5 @@ function initMap() {
               position: google.maps.ControlPosition.BOTTOM_CENTER
           }
     });  
-  }
+}
+
