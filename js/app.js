@@ -4,11 +4,11 @@ var infoWindow;
 
 // Model Parks array of 5 parks with name and address.
 var Parks = [
-	{name: '', address: ''},
-	{name: '', address: ''},
-	{name: '', address: ''},
-	{name: '', address: ''},
-	{name: '', address: ''}
+    {name: 'Escola Carlos Lencastre | My Elementary School', address: 'R. Antônio Grigoleto, 88 - Jardim Garcia, Campinas - SP, 13061-120, Brazil'},
+    {name: 'Colégio Fundação Bradesco | My Middle School', address: 'Rodovia Lix da Cunha, km 3,5, s/n - Lago Continuação, Campinas - SP, 13012-970, Brazil'},
+	{name: 'Minha Casa | My Home', address: 'R. Sen Vergueiro, 37 - Jardim Garcia, Campinas - SP, 13061-212, Brazil'},
+	{name: "Casa do Vô Joel | My Grandpa's House", address: 'Av. Nossa Senhora da Consolação, 790 - Vila Prost de Souza, Campinas - SP, Brazil'},
+	{name: 'Santuário Nossa Senhora do Guadalupe | Sanctuary of Our Lady of Guadalupe', address: 'R. Sofia Valter Salgado, s/n - Vila Castelo Branco, Campinas - SP, 13061-266, Brazil'}
 ];
 
 // This function allows for the Google Map to be rendered as well as all markers to be created.
