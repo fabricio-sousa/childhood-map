@@ -22,6 +22,37 @@
 
     <body>
 
+        <!-- Navbar -->
+	    <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="input-group">
+                            <input data-bind="value: search, valueUpdate: 'input'" class="form-control" placeholder="Buscar | Search" type="text">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" <i class="glyphicon glyphicon-search"></i>Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- The Google Map -->
+        <main class="container-fluid">
+            <div class="row">
+                <div id="map"></div>
+                <!-- Side bar with the list of parks. -->
+                <aside class="col-md-3 col-md-offset-9 collapsed in" id="navbarSupportedContent">
+                    <div class="sidenav">
+                        <ul data-bind="foreach: searchParks" class="list-group">
+                            <a  href="#" data-bind="text: name" onclick="clickMarker(this.innerHTML);" class="list-group-item list-group-item-action"></a>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </main>
+
         <!-- Begin script calls. -->
         <script src="js/libs/knockout.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
