@@ -224,15 +224,7 @@ function populateWindow (park) {
 
         
 		infoWindow.setContent('<div class="infoWindow"><h4>' + park.name + '</div>');
-    };
-
-    var streetViewService = new google.maps.StreetViewService();
-    var radius = 50;
-
-    function getStreetView(data, status) {
-
-        
-    }
+	};
 }
 
 
