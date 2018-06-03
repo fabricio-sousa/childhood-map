@@ -121,6 +121,11 @@ function initMap() {
     Parks.forEach(function(park) {
         geocodePark(geocoder, park, map);
     });
+
+    // Declare a new infoWindow object.
+    infoWindow = new google.maps.InfoWindow();
+    
+    
 }
 
 // Google Maps API error handling.
