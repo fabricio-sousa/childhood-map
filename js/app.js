@@ -1,3 +1,7 @@
+// Global variables. Empty array for markers and infoWindow variable.
+var markers = [];
+var infoWindow;
+
 // This function allows for the Google Map to be rendered as well as all markers to be created.
 function initMap() {
 
