@@ -13,8 +13,8 @@ body {
 }
 
 #pano {
-    width: 200px;
-    height: 200px;
+  height: 250px;
+  weight: 500px;
 }
 
 .navbar {
@@ -44,12 +44,16 @@ body {
 }
 
 .infoWindow {
-  width: 100%;
-  height: 100%;
+  width: 800px;
+  height: 800px;
 }
 
 .title {
   font-size: 2.5em;
+}
+
+.infoTitle {
+  font-size: 1.5em;
 }
 
 /* Extra small devices (phones, 600px and down) */
