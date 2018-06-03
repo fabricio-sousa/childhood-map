@@ -151,6 +151,36 @@ function markerBounce(marker) {
 	}
 }
 
+// This is the ViewModel function connecting all views, model and user input functionalities.
+var ViewModel = function() {
+
+	var self = this;
+	this.search = ko.observable("");
+
+	// Filter Parks based on user input.
+	this.searchParks = ko.computed(function() {
+		var search = self.search().toLowerCase();
+		if (!search) {
+			Parks.forEach(function(park) {
+				if (park.marker) {
+					park.marker.setVisible(true);
+				}
+			});
+			return Parks;
+		} else {
+			return ko.utils.arrayFilter(Parks, function(park) {
+		 		var match = park.name.toLowerCase().indexOf(search) !== -1;
+		 		if (match) {
+		 			park.marker.setVisible(true);
+		 		} else {
+		 			park.marker.setVisible(false);
+		 		}
+		 		return match;
+		 	});
+		}
+	});
+};
+
 // Google Maps API error handling.
 function apiError() {
 	alert("There was an issue loading the Google Maps API.");
