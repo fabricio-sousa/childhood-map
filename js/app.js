@@ -224,10 +224,35 @@ function populateWindow (park) {
 		infoWindow.open(map, park.marker);
 		infoWindow.addListener('closeclick', function() {
 			infoWindow.setMarker = null;
-		});
+        });
 
+        function getStreetView(data, status) {
+
+            if (status == google.maps.StreetViewStatus.OK) {
+
+                var nearStreetViewLocation = park.marker.position;
+                var heading = google.maps.geometry.spherical.computeHeading (
+                    nearStreetViewLocation, park.marker.position);
+                    infoWindow.setContent('<div class="infoWindow"><h4>' + park.name + 
+                                          '</div><div id="pano"></div>');
+                    var panoramaOptions = {
+                        position: nearStreetViewLocation,
+                        pov: {
+                            heading: heading,
+                            pitch: 30
+                        }
+                };
+                var panorama = new google.maps.StreetViewPanorama(
+                    document.getElementById('pano'), panoramaOptions);
+            } else {
+                infoWindow.setContent('<div class="infoWindow"><h4>' + park.name + 
+                                          '</div><h4>No Street View Found</h4>');
+            }
+        }
         
-		infoWindow.setContent('<div class="infoWindow"><h4>' + park.name + '</div>');
+        // Use streetview service to get the closest streetview image within
+        // 50 meters of the markers position
+        streetViewService.getPanoramaByLocation(park.marker.position, radius, getStreetView);		
 	};
 }
 
