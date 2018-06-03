@@ -214,19 +214,19 @@ function geocodePark(geocoder, park, parksMap) {
 // This function allows the wiki API to provide marker infoWindow content.
 function populateWindow (park) {
 
-    // If marker clicked, open; if open, and x closed, close.
-    if (infoWindow.marker != park.marker) {
-        infoWindow.marker = park.marker;
-        infoWindow.open(map, park.marker);
-        infoWindow.addListener('closeclick', function() {
-        infoWindow.setMarker = null;
-    });
+	// If marker clicked, open; if open, and x closed, close.
+	if (infoWindow.marker != park.marker) {
+		infoWindow.marker = park.marker;
+		infoWindow.open(map, park.marker);
+		infoWindow.addListener('closeclick', function() {
+			infoWindow.setMarker = null;
+		});
 
-    // Set the content of the ajax query to the infoWindow.
-    infoWindow.setContent('<div class="infoWindow"><h4>' + park.name + '</div>');
-};
-
+		// Set the content of the ajax query to the infoWindow.
+		infoWindow.setContent('<div class="infoWindow"><h4>' + park.name + '</div>');
+	};
 }
+
 
 // This is the ViewModel function connecting all views, model and user input functionalities.
 var ViewModel = function() {
