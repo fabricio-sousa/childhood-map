@@ -114,7 +114,7 @@ function initMap() {
     // Constructor creates a new map.
     map = new google.maps.Map(document.getElementById('map'), {
   
-      zoom: 9,
+      zoom: 15,
       styles: styles,
           mapTypeControl: true,
           mapTypeControlOptions: {
