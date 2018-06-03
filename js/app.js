@@ -214,6 +214,10 @@ function geocodePark(geocoder, park, parksMap) {
 // This function allows the wiki API to provide marker infoWindow content.
 function populateWindow (park) {
 
+    // Creates a new streetViewService object variable and radius variable
+    var streetViewService = new google.maps.StreetViewService();
+    var radius = 50;
+
 	// If marker clicked, open; if open, and x closed, close.
 	if (infoWindow.marker != park.marker) {
 		infoWindow.marker = park.marker;
