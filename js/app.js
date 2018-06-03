@@ -2,6 +2,15 @@
 var markers = [];
 var infoWindow;
 
+// Model Parks array of 5 parks with name and address.
+var Parks = [
+	{name: '', address: ''},
+	{name: '', address: ''},
+	{name: '', address: ''},
+	{name: '', address: ''},
+	{name: '', address: ''}
+];
+
 // This function allows for the Google Map to be rendered as well as all markers to be created.
 function initMap() {
 
