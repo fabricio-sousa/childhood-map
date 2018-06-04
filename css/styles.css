@@ -44,10 +44,6 @@ body {
     background-color: #555;
 }
 
-.infoWindow {
-  width: 800px;
-  height: 800px;
-}
 
 .title {
   font-size: 2.5em;
@@ -56,39 +52,23 @@ body {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
-  .infoWindow {
-    width: 33%;
-    height: 33%;
-  }
 
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 
-  .infoWindow {
-    width: 50%;
-    height: 50%;
-  }
 
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
-  .infoWindow  {
-    width: 65%;
-    height: 65%;
-  }
 
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
-  .infoWindow  {
-    width: 100%;
-    height: 100%;
-  }
 
 }
