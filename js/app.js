@@ -8,7 +8,7 @@ var Parks = [
     {name: 'Colégio Fundação Bradesco | My Middle School', address: 'Rodovia Lix da Cunha, km 3,5, s/n - Lago Continuação, Campinas - SP, 13012-970, Brazil'},
 	{name: 'Minha Casa | My Home', address: 'R. Sen Vergueiro, 37 - Jardim Garcia, Campinas - SP, 13061-212, Brazil'},
 	{name: "Casa do Vô Joel | My Grandpa's House", address: 'Av. Nossa Senhora da Consolação, 790 - Vila Prost de Souza, Campinas - SP, Brazil'},
-	{name: 'Santuário Nossa Senhora do Guadalupe | Sanctuary of Our Lady of Guadalupe', address: 'R. Sofia Valter Salgado, s/n - Vila Castelo Branco, Campinas - SP, 13061-266, Brazil'}
+	{name: "Santuário Nossa Senhora do Guadalupe | Sanctuary of Our Lady of Guadalupe", address: 'R. Sofia Valter Salgado, s/n - Vila Castelo Branco, Campinas - SP, 13061-266, Brazil'}
 ];
 
 // This function allows for the Google Map to be rendered as well as all markers to be created.
@@ -233,7 +233,7 @@ function populateWindow (park) {
                 var nearStreetViewLocation = park.marker.position;
                 var heading = google.maps.geometry.spherical.computeHeading (
                     nearStreetViewLocation, park.marker.position);
-                    infoWindow.setContent('<div class="infoWindow"><div id="pano"></div>' + '<h4>' + park.name + '</h4></div>');
+                    infoWindow.setContent('<div id="pano"></div><h5>' + park.name + '</h5>');
                     var panoramaOptions = {
                         position: nearStreetViewLocation,
                         pov: {
