@@ -1,6 +1,6 @@
 # Childhood Map Project
 
-### Developer: Fabricio Sousa
+#### Developer: Fabricio Sousa
 
 ## Description
 
